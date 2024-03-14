@@ -1,0 +1,27 @@
+.social {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__images {
+    max-width: 920px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+      font-size: 30px;
+      text-align: center;
+      flex: 0 0 calc(20% - 40px);
+      padding: 20px;
+      margin: 5px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+}

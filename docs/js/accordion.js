@@ -1,0 +1,1 @@
+let i,faqAccordions=document.getElementsByClassName("FAQ__accordion");for(let e of faqAccordions)e.addEventListener("click",(function(e){e.target.classList.toggle("active");let t=e.target.nextElementSibling;t.style.maxHeight?t.style.maxHeight=null:t.style.maxHeight=t.scrollHeight+"px"}));

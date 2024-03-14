@@ -1,0 +1,93 @@
+.download {
+  margin-top: 101px;
+  margin-bottom: 101px;
+  display: flex;
+  position: relative;
+  &__text {
+    max-width: 600px;
+  }
+
+  &__list {
+    ol {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        font-weight: 600;
+        counter-increment: item;
+        padding: 0;
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          display: grid;
+          content: counter(item);
+          background-image: linear-gradient(to right, $cyan, $purple);
+          color: white;
+          justify-content: center;
+          align-content: center;
+          padding: 11px 16px;
+          margin-right: 22px;
+          border-radius: 50%;
+        }
+        &:first-child {
+          &::before {
+            padding: 11px 17.5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    max-width: 600px;
+    background: url("/images/star.png");
+    background-repeat: no-repeat;
+    background-position: 350px 10px;
+    filter: drop-shadow(-50px 20px 10px #48555F5F);
+    padding: 70px 50px 30px 30px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__lines {
+    position: absolute;
+    top: -45px;
+  }
+
+  @include breakpoint(laptop) {
+    &__text {
+      max-width: 550px;
+    }
+  }
+
+  @include breakpoint(iPad) {
+    &__text {
+      max-width: 460px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &__container {
+      justify-content: center;
+    }
+  }
+
+
+  @include breakpoint(sm-phone) {
+    &__image {
+      background-position: 240px 10px;
+      filter: drop-shadow(-15px 20px 10px #48555F5F);
+      img {
+        max-width: 308px;
+      }
+    }
+  }
+}
+

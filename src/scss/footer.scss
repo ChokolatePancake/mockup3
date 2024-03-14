@@ -1,0 +1,138 @@
+.footer {
+  margin-top: 64px;
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    display: grid;
+    margin-top: 24px;
+    grid-auto-flow: column;
+    align-content: center;
+    gap: 5px;
+    justify-content: left;
+  }
+
+  a:active {
+    color: $dark-black;
+  }
+
+  a:link {
+    color: $light-black;
+  }
+
+  a:visited {
+    color: $light-black;
+  }
+
+  &__top-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  &__container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 542px;
+    width: 100%;
+    h4 {
+      margin: 0;
+    }
+
+  }
+
+
+
+  &__download-container {
+    max-width: 400px;
+    p {
+      &:not(:first-child) {
+        margin-top: 16px;
+        margin-bottom: 24px;
+      }
+    }
+    svg {
+      align-self: center;
+    }
+  }
+
+  &__bottom-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__policy {
+    display: flex;
+    justify-content: space-between;
+    max-width: 345px;
+    width: 100%;
+  }
+
+  &__copyright {
+    align-content: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+
+  @include breakpoint(tablet) {
+    &__container {
+      p {
+        padding-right: 20px;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    &__top-container {
+      flex-direction: column;
+    }
+    &__download {
+      margin-bottom: 16px;
+    }
+    &__lists {
+      flex-wrap: wrap;
+    }
+    &__download-container {
+      p {
+        &:not(:first-child) {
+          margin-top: 16px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__bottom-container {
+      flex-direction: column;
+    }
+  }
+
+  @include breakpoint(mobileLarge) {
+    &__download-container {
+      max-width: 600px;
+    }
+    &__copyright {
+      margin-top: 10px;
+    }
+  }
+
+  @include breakpoint(sm-phone) {
+    &__container {
+      max-width: 130px;
+      width: 100%;
+      &:last-child {
+        margin-top: 40px;
+      }
+    }
+    &__policy {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
+

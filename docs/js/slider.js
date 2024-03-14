@@ -1,0 +1,1 @@
+let splide=new Splide(".splide",{perPage:4,perMove:1,type:"loop",pagination:!1,autoplay:!0,arrows:!1,focus:"center",breakpoints:{1300:{perPage:3},1100:{perPage:3},767:{perPage:2},389:{perPage:1}}});splide.mount();
