@@ -1,7 +1,6 @@
 {
-  "name": "landingpage",
+  "name": "mockup3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +20,19 @@
     "gulp-uglify-es": "^3.0.0",
     "sass": "^1.70.0",
     "swiper": "^11.0.7"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChokolatePancake/mockup3.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ChokolatePancake/mockup3/issues"
+  },
+  "homepage": "https://github.com/ChokolatePancake/mockup3#readme",
+  "description": ""
 }

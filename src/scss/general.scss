@@ -3,51 +3,7 @@
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 980px;
+  padding: 0 10px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media(max-width: 1300px) {
-  .container{
-    max-width: 1100px;
-  }
-}
-
-@media(max-width: 1100px){
-  .container{
-    max-width: 1000px;
-  }
-}
-
-@media(max-width: 992px) {
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media(max-width: 767px){
-  .container{
-    max-width: 576px;
-  }
-}
-@media(max-width: 639px) {
-  .container{
-    max-width: 460px;
-  }
-}
-
-@media(max-width: 389px){
-  .container{
-    max-width: 355px;
-  }
-}
-
-
-
-
-hr {
-  border: none;
-  height: 1px;
-  background-color: $white;
 }
