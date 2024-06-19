@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=window.location.pathname;document.querySelectorAll(".header__nav-link").forEach((t=>{t.getAttribute("href")===e&&t.classList.add("active")}))}));
