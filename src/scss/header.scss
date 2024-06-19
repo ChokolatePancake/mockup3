@@ -14,7 +14,6 @@
     display: grid;
     justify-items: right;
     margin-left: auto;
-    max-width: 300px;
     margin-top: -20px;
     margin-right: 0;
     h2 {
@@ -39,7 +38,6 @@
   }
 
   &__logo {
-    max-width: 300px;
     display: flex;
   }
 
@@ -90,6 +88,58 @@
       color: $white;
       font-weight: bolder;
       font-size: 22px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &__feedback {
+      h2 {
+        font-size: 26px;
+      }
+      button {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include breakpoint(phablet) {
+    &__logo-image {
+      max-width: 90px;
+      max-height: 90px;
+    }
+    &__logo-text {
+      h1{
+        font-size: 22px;
+      }
+    }
+    &__feedback {
+      margin-top: 5px;
+      grid-template-rows: 30px;
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      button {
+        font-size: 18px;
+        text-decoration:  $dark-grey underline dashed 1px;
+      }
+    }
+  }
+
+  @include breakpoint(largePhone) {
+    &__top {
+      padding: 45px 0;
+      max-height: 300px;
+      >.container {
+        flex-direction: column;
+      }
+    }
+    &__feedback{
+      margin-top: 15px;
+      justify-items: left;
+      margin-left: 0;
+      margin-right: auto;
     }
   }
 }

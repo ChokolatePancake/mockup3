@@ -7,4 +7,24 @@
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
+
+  @include breakpoint(desktop) {
+    max-width: 940px;
+  }
+
+  @include breakpoint(laptop) {
+    max-width: 740px;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 580px;
+  }
+
+  @include breakpoint(phablet) {
+    max-width: 470px;
+  }
+
+  @include breakpoint(largePhone) {
+    max-width: 310px;
+  }
 }
