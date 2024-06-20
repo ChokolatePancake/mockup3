@@ -1,0 +1,91 @@
+.slider {
+  position: relative;
+
+  img {
+    margin: 0 auto;
+  }
+
+  &__arrows {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: $light-grey;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  @include breakpoint(desktop) {
+    img {
+      max-width: 1024px;
+    }
+  }
+
+  @include breakpoint(laptop) {
+    img {
+      max-width: 768px;
+    }
+    .prev {
+      left: 80px;
+    }
+    .next {
+      right: 80px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    img {
+      max-width: 600px;
+    }
+    &__arrows {
+      padding: 7px;
+    }
+    .prev {
+      left: 60px;
+    }
+    .next {
+      right: 60px;
+    }
+  }
+
+  @include breakpoint(phablet) {
+    img {
+      max-width: 480px;
+    }
+    &__arrows {
+      padding: 7px;
+      font-size: 26px;
+    }
+    .prev {
+      left: 45px;
+    }
+    .next {
+      right: 45px;
+    }
+  }
+
+  @include breakpoint(largePhone) {
+    img {
+      max-width: 320px;
+    }
+    &__arrows {
+      padding: 4px;
+      font-size: 20px;
+    }
+    .prev {
+      left: 35px;
+    }
+    .next {
+      right: 35px;
+    }
+  }
+}
+.prev {
+  left: 100px;
+}
+.next {
+  right: 100px;
+}
