@@ -1,5 +1,10 @@
 .menu {
   background-color: $dark-grey;
+  padding: 15px;
+  &__burger {
+    display: none;
+    cursor: pointer;
+  }
 
   &__list {
     display: flex;
@@ -22,6 +27,7 @@
     li {
       display: contents;
     }
+
     li + li::before {
       content: '|';
       color: $white;
@@ -29,4 +35,72 @@
       font-size: 22px;
     }
   }
-}
+
+
+
+  @include breakpoint(tablet) {
+    &__burger {
+      display: block;
+
+      &-line {
+        transition: transform 0.75s ease, opacity 0.75 ease;
+        display: block;
+        width: 32px;
+        height: 2px;
+        background-color: $white;
+        margin-top: 8px;
+      }
+    }
+    &__list {
+      display: none;
+      li + li::before {
+        content: '';
+      }
+      &.show {
+        display: flex;
+        flex-direction: column;
+        margin-top: -15px;
+        a {
+            margin: 10px 0;
+            font-size: 32px;
+            font-weight: bolder;
+        }
+
+        + .menu__burger {
+          .menu__burger-line1 {
+            transform: translate(-10px) rotate(45deg) translate(15px);
+          }
+
+          .menu__burger-line2 {
+            opacity: 0;
+          }
+
+          .menu__burger-line3 {
+            transform: translate(-10px) rotate(-45deg) translate(15px);
+          }
+        }
+      }
+      }
+  }
+
+  @include breakpoint(phablet) {
+    &__list {
+      &.show {
+        a {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(largePhone) {
+    &__list {
+      &.show {
+        a {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  }
