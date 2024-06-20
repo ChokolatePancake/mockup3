@@ -1,13 +1,10 @@
 .header {
-
-  &__top{
-    background-color: $light-grey;
-    color: $dark-grey;
-    max-height: 230px;
-    padding: 65px 0;
+  background-color: $light-grey;
+  color: $dark-grey;
+  max-height: 230px;
+  padding: 65px 0;
   >.container {
     display: flex;
-  }
   }
 
   &__feedback {
@@ -55,39 +52,6 @@
     p {
       margin: 0;
       font-size: 14px;
-    }
-  }
-
-  &__bottom {
-    background-color: $dark-grey;
-  }
-
-  &__menu {
-    display: flex;
-    padding: 26px 35px;
-    align-items: center;
-    justify-content: space-between;
-
-    a {
-      text-decoration: none;
-      font-size: 21px;
-      color: $white;
-    }
-
-    li:nth-child(3) {
-      a {
-        text-decoration: $white underline 1.5px;
-      }
-    }
-
-    li {
-      display: contents;
-    }
-    li + li::before {
-      content: '|';
-      color: $white;
-      font-weight: bolder;
-      font-size: 22px;
     }
   }
 

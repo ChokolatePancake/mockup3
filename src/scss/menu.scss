@@ -1,0 +1,32 @@
+.menu {
+  background-color: $dark-grey;
+
+  &__list {
+    display: flex;
+    padding: 26px 35px;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      font-size: 21px;
+      color: $white;
+    }
+
+    li:nth-child(3) {
+      a {
+        text-decoration: $white underline 1.5px;
+      }
+    }
+
+    li {
+      display: contents;
+    }
+    li + li::before {
+      content: '|';
+      color: $white;
+      font-weight: bolder;
+      font-size: 22px;
+    }
+  }
+}
