@@ -1,0 +1,1 @@
+function initBurger(){const e=document.querySelector(".content__burger"),t=document.querySelector(".content__left-block");e.addEventListener("click",(()=>{t.classList.toggle("shows")}))}document.addEventListener("DOMContentLoaded",initBurger);
