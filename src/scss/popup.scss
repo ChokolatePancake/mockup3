@@ -57,6 +57,7 @@
     &.highlight-error {
       border: 1.5px solid $red;
       background: radial-gradient(ellipse at center, $white 65%, $red 120%);
+      color: $red;
     }
   }
 
