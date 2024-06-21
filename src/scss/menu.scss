@@ -64,22 +64,8 @@
             font-size: 32px;
             font-weight: bolder;
         }
-
-        + .menu__burger {
-          .menu__burger-line1 {
-            transform: translate(-10px) rotate(45deg) translate(15px);
-          }
-
-          .menu__burger-line2 {
-            opacity: 0;
-          }
-
-          .menu__burger-line3 {
-            transform: translate(-10px) rotate(-45deg) translate(15px);
-          }
-        }
       }
-      }
+    }
   }
 
   @include breakpoint(phablet) {

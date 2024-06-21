@@ -124,10 +124,6 @@
     color: $light-black;
   }
 
-  &__add {
-    cursor: pointer;
-  }
-
   &__pagination {
     margin-top: 13px;
     margin-bottom: 68px;
@@ -209,19 +205,6 @@
         flex-direction: column;
         background-color: $white;
         max-width: 300px;
-        + .menu__burger {
-          .menu__burger-line1 {
-            transform: translate(-10px) rotate(45deg) translate(15px);
-          }
-
-          .menu__burger-line2 {
-            opacity: 0;
-          }
-
-          .menu__burger-line3 {
-            transform: translate(-10px) rotate(-45deg) translate(15px);
-          }
-        }
       }
     }
   }
