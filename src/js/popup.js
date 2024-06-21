@@ -13,7 +13,7 @@ sendbtn.addEventListener("click", (e) => {
     form.querySelectorAll('[required]').forEach(field => {
         if (field.value.trim() === '') {
             field.classList.add('highlight-error');
-            field.value= 'Необхідно заповнити дане поле';
+            field.placeholder= 'Необхідно заповнити дане поле';
             isValid = false;
         } else {
             field.classList.remove('highlight-error');
