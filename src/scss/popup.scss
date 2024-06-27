@@ -4,6 +4,21 @@
   opacity: 0; // Set initial opacity to 0
   visibility: hidden; // Hide element visibility
 
+  &__complete {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    padding: 35px 65px 25px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 10001;
+    outline: 1000px solid  rgba(51, 51, 51, 0.7); // For dark background without using additional divs
+    &.show {
+      display: block;
+      }
+    }
+
   &.show {
     // Show popup when 'show' class is added
     position: fixed; // Fixed positioning to overlay entire screen
