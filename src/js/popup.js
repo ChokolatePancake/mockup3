@@ -3,9 +3,21 @@ let closebtn = document.getElementById("close-popup"); // Button to close the po
 let sendbtn = document.getElementById("send-button"); // Button to submit the form
 let popup = document.querySelector(".popup"); // Popup container
 let form = document.querySelector(".popup__form"); // Form within the popup
+let complete = document.querySelector(".popup__complete");
 
 // Event listener for showing the popup when 'show' button is clicked
 showbtn.addEventListener("click", () => popup.classList.add("show"));
+
+// Function for email validation
+function isValidEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+// Function for phone validation
+function isPhoneComplete(phone) {
+    return /^\+\(380\)-\d{3}-\d{2}-\d{2}$/.test(phone);
+}
 
 // Event listener for closing the popup when 'close' button is clicked
 closebtn.addEventListener("click", () => {
@@ -25,6 +37,12 @@ sendbtn.addEventListener("click", (e) => {
             field.classList.add('highlight-error'); // Add a class to highlight the error
             field.placeholder = 'Необхідно заповнити дане поле'; // Set a placeholder message
             isValid = false; // Set isValid to false if any required field is empty
+        } else if (field.type === 'tel' && !isPhoneComplete(field.value)) {
+            field.classList.add('highlight-error');
+            isValid = false;
+        } else if (field.type === 'email' && !isValidEmail(field.value)) {
+            field.classList.add('highlight-error');
+            isValid = false;
         } else {
             field.classList.remove('highlight-error'); // Remove the error highlight if the field is filled
         }
@@ -35,7 +53,13 @@ sendbtn.addEventListener("click", (e) => {
         console.log("Form submitted!");
         popup.classList.remove("show");
         form.reset();
+        complete.classList.add("show"); // Show complete message
     }
+});
+
+// Hide congrats message, if mouse out
+complete.addEventListener('mouseout', () => {
+    complete.classList.remove('show');
 });
 
 // Event listener to remove error highlights when typing in the form fields

@@ -11,14 +11,14 @@
   // Menu list styles
   &__list {
     display: flex; // Flex layout for menu list
-    padding: 26px 35px; // Padding inside menu list
+    padding: 9px 38px; // Padding inside menu list
     align-items: center; // Center align items vertically
     justify-content: space-between; // Space items evenly along the main axis
 
     // Anchor (link) styles inside menu list
     a {
       text-decoration: none; // Remove underline from links
-      font-size: 21px; // Font size for links
+      font-size: 30px; // Font size for links
       color: $white; // Text color for links
 
       &:hover {
@@ -37,6 +37,12 @@
       color: $white; // Color for separator
       font-weight: bolder; // Bold font weight for separator
       font-size: 22px; // Font size for separator
+    }
+  }
+
+  @include breakpoint(laptop) {
+    a {
+      font-size: 24px;
     }
   }
 
