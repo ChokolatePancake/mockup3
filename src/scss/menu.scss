@@ -62,22 +62,27 @@
     }
 
     &__list {
-      display: none; // Hide menu list on tablet by default
+      // Adjusted styles for links inside the menu list
+      a {
+        margin: 10px 0; // Margin for links
+        font-size: 32px; // Font size for links
+        font-weight: bolder; // Bold font weight for links
+      }
+      flex-direction: column;
+      padding-top: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out; // Hide menu list on tablet by default
       li + li::before {
         content: ''; // Empty content for separator on tablet and larger screens
       }
 
       &.show {
-        display: flex; // Display menu list as flex container when 'show' class is applied
-        flex-direction: column; // Stack items vertically in column layout
-        margin-top: -15px; // Negative top margin to align menu list with burger menu
-
-        // Adjusted styles for links inside the menu list when 'show' class is applied
-        a {
-          margin: 10px 0; // Margin for links
-          font-size: 32px; // Font size for links
-          font-weight: bolder; // Bold font weight for links
-        }
+        max-height: 400px;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
       }
     }
   }
