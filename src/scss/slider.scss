@@ -2,90 +2,93 @@
   position: relative;
 
   img {
-    margin: 0 auto;
+    margin: 0 auto; // Center align images horizontally
   }
 
   &__arrows {
-    position: absolute;
-    margin: 0 auto;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    font-size: 30px;
-    font-weight: bold;
-    background-color: $light-grey;
-    padding: 10px;
-    z-index: 1000;
+    position: absolute; // Absolute positioning for arrows
+    margin: 0 auto; // Center align arrows horizontally
+    top: 50%; // Position arrows vertically at 50% from the top
+    -ms-transform: translateY(-50%); // Center vertically in older IE
+    transform: translateY(-50%); // Center vertically using modern browsers
+    font-size: 30px; // Default font size for arrows
+    font-weight: bold; // Bold font weight for arrows
+    background-color: $light-grey; // Background color for arrows
+    padding: 10px; // Padding around arrows
+    z-index: 1000; // Higher z-index to overlay on images
   }
 
+  // Media queries for different breakpoints
   @include breakpoint(desktop) {
     img {
-      max-width: 1024px;
+      max-width: 1024px; // Adjusted max-width for desktop screens
     }
   }
 
   @include breakpoint(laptop) {
     img {
-      max-width: 768px;
+      max-width: 768px; // Adjusted max-width for laptop screens
     }
     .prev {
-      left: 80px;
+      left: 80px; // Adjusted position for previous arrow on laptop screens
     }
     .next {
-      right: 80px;
+      right: 80px; // Adjusted position for next arrow on laptop screens
     }
   }
 
   @include breakpoint(tablet) {
     img {
-      max-width: 600px;
+      max-width: 600px; // Adjusted max-width for tablet screens
     }
     &__arrows {
-      padding: 7px;
+      padding: 7px; // Adjusted padding around arrows on tablet screens
     }
     .prev {
-      left: 60px;
+      left: 60px; // Adjusted position for previous arrow on tablet screens
     }
     .next {
-      right: 60px;
+      right: 60px; // Adjusted position for next arrow on tablet screens
     }
   }
 
   @include breakpoint(phablet) {
     img {
-      max-width: 480px;
+      max-width: 480px; // Adjusted max-width for phablet screens
     }
     &__arrows {
-      padding: 7px;
-      font-size: 26px;
+      padding: 7px; // Adjusted padding around arrows on phablet screens
+      font-size: 26px; // Adjusted font size for arrows on phablet screens
     }
     .prev {
-      left: 45px;
+      left: 45px; // Adjusted position for previous arrow on phablet screens
     }
     .next {
-      right: 45px;
+      right: 45px; // Adjusted position for next arrow on phablet screens
     }
   }
 
   @include breakpoint(largePhone) {
     img {
-      max-width: 320px;
+      max-width: 320px; // Adjusted max-width for large phone screens
     }
     &__arrows {
-      padding: 4px;
-      font-size: 20px;
+      padding: 4px; // Adjusted padding around arrows on large phone screens
+      font-size: 20px; // Adjusted font size for arrows on large phone screens
     }
     .prev {
-      left: 35px;
+      left: 35px; // Adjusted position for previous arrow on large phone screens
     }
     .next {
-      right: 35px;
+      right: 35px; // Adjusted position for next arrow on large phone screens
     }
   }
 }
+
 .prev {
-  left: 100px;
+  left: 100px; // Default position for previous arrow
 }
+
 .next {
-  right: 100px;
+  right: 100px; // Default position for next arrow
 }

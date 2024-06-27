@@ -6,17 +6,42 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mockup3</title>
+    <!-- Link to main CSS file -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
+<!-- Include header HTML file -->
 @@include('html/header.html')
+<!-- Include menu HTML file -->
 @@include('html/menu.html')
-@@include('html/slider.html')
+<main>
+    <!-- Include slider HTML file -->
+    @@include('html/slider.html')
+    <!-- Include content HTML file -->
+    @@include('html/content.html')
+</main>
+<!-- Include footer HTML file -->
+@@include('html/footer.html')
+<!-- Include popup HTML file -->
+@@include('html/popup.html')
+
+<!-- JavaScript for burger menu functionality -->
 <script src="/js/burger.js"></script>
+<!-- jQuery library -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- jQuery migrate plugin -->
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Slick Carousel JavaScript from CDN -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Custom JavaScript for slider functionality -->
 <script src="js/slider.js"></script>
+<!-- Custom JavaScript for categories functionality -->
+<script src="js/categories.js"></script>
+<!-- Custom JavaScript for categories burger menu -->
+<script src="js/categories-burger.js"></script>
+<!-- Custom JavaScript for popup functionality -->
+<script src="js/popup.js"></script>
 </body>
 </html>

@@ -1,0 +1,301 @@
+// Styles for .content section
+.content {
+  margin-bottom: 200px;
+
+  // Styles for burger menu icon
+  &__burger {
+    display: none; // Initially hidden
+    cursor: pointer; // Pointer cursor when mouse on it
+  }
+
+  // Flexbox layout for blocks inside content
+  &__blocks {
+    display: flex;
+    margin-top: 8px;
+  }
+
+  // Styles for all links
+  a {
+    color: $dark-grey;
+    text-decoration: none;
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+
+  // Styles for breadcrumbs section
+  &__breadcrumbs {
+    color: $dark-grey;
+    a {
+      font-size: 20px;
+      &:last-child {
+        text-decoration: none; // Remove underline from last breadcrumb link
+      }
+    }
+  }
+
+  // Left sidebar block styles
+  &__left-block {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  // Categories section styles
+  &__categories {
+    margin-top: -8px; // Adjust alignment with content above
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 24px;
+    }
+  }
+
+  // Individual category link styles
+  &__category {
+    padding: 8px 0;
+    &.underlined {
+      text-decoration: underline; // Add underline when hovered
+    }
+  }
+
+  // Lists section styles (hidden by default)
+  &__lists {
+    display: none;
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      font-size: 20px;
+    }
+    &.show {
+      display: flex;
+      flex-direction: column; // Show as a column when active
+    }
+  }
+
+  // Price list section styles
+  &__price-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+    a {
+      margin: 0 auto; // Center-align links
+      color: $dark-grey;
+      font-size: 24px;
+      font-weight: bolder;
+      &:hover {
+        text-decoration: none; // Remove underline on hover
+      }
+    }
+  }
+
+  // Containers for content items (flexbox layout)
+  &__containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  // Individual content container styles
+  &__container {
+    background-color: $light-grey;
+    padding: 15px 15px 20px;
+    max-width: 240px;
+    margin-bottom: 22px;
+    max-height: 400px;
+    height: 100%;
+    &:not(:nth-child(3n)) {
+      margin-right: 20px; // Margin for every third container
+    }
+  }
+
+  // Image styles inside containers
+  &__image {
+    img {
+      max-width: 210px; // Limit image width
+    }
+  }
+
+  // Text styles within content
+  &__text {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: $dark-grey;
+    a:hover {
+      text-decoration: none; // Remove underline on hover
+    }
+  }
+
+  // Bottom section of content (flexbox layout)
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // Price text styles
+  &__price {
+    font-size: 24px;
+    font-weight: bolder;
+    color: $light-black;
+  }
+
+  // Pagination styles
+  &__pagination {
+    margin-top: 13px;
+    margin-bottom: 68px;
+    ol {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 210px;
+      li:hover {
+        margin-top: -5px; // Adjust hover effect
+      }
+    }
+    a {
+      font-size: 22px;
+      &:hover {
+        text-decoration: none; // Remove underline on hover
+        font-size: 26px; // Increase font size on hover
+      }
+    }
+  }
+
+  // Right sidebar block styles
+  &__right-block {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  // About section styles (flexbox layout)
+  &__abouts {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // Individual about block styles
+  &__about {
+    max-width: 370px;
+    color: $light-black;
+    font-size: 18px;
+    &:first-child {
+      margin-bottom: 30px; // Margin for first about block
+    }
+  }
+
+  // Responsive styles for laptops
+  @include breakpoint(laptop) {
+    &__right-block {
+      max-width: 510px; // Adjust max-width for content block
+    }
+
+    &__about {
+      max-width: 230px; // Adjust max-width for about section
+    }
+
+    &__container {
+      margin-right: 20px;
+      &:nth-child(2n) {
+        margin-right: 0; // Adjust margins for even containers
+      }
+    }
+  }
+
+  // Responsive styles for tablets
+  @include breakpoint(tablet) {
+    &__burger {
+      display: block;
+      margin: 15px 5px;
+      &-line {
+        transition: transform 0.75s ease, opacity 0.75 ease;
+        display: block;
+        width: 32px;
+        height: 2px;
+        background-color: $dark-grey;
+        margin-top: 8px;
+      }
+    }
+    &__right-block {
+      margin: 0 auto; // Center-align right block
+    }
+
+    &__left-block {
+      display: none; // Hide left block on tablets
+      position: absolute;
+      &.shows {
+        display: flex;
+        flex-direction: column;
+        background-color: $white; // White background for menu
+        max-width: 300px; // Max width for menu
+      }
+    }
+  }
+
+  // Responsive styles for phablet (larger than phones, smaller than tablets)
+  @include breakpoint(phablet) {
+    &__container {
+      &:nth-child(n) {
+        margin-right: 0; // Reset margin for containers
+      }
+      max-width: 400px; // Adjust max-width for containers
+      margin-bottom: 30px; // Adjust margin bottom for containers
+      max-height: 667px; // Adjust max-height for containers
+      height: 100%; // Adjust height for containers
+      img {
+        max-width: 370px; // Adjust max-width for images
+        width: 100%;
+      }
+    }
+    &__text {
+      font-size: 28px; // Adjust font size for text
+    }
+    &__price {
+      font-size: 35px; // Adjust font size for price
+    }
+    &__add {
+      img {
+        width: 56px; // Adjust width for additional elements
+      }
+    }
+
+    &__containers {
+      justify-content: center; // Center-align containers
+    }
+
+    &__abouts {
+      flex-direction: column; // Stack about sections vertically
+    }
+
+    &__about {
+      max-width: 450px; // Adjust max-width for about section
+      &:first-child {
+        margin-bottom: 30px; // Adjust margin bottom for first about block
+      }
+    }
+  }
+
+  // Responsive styles for large phones
+  @include breakpoint(largePhone) {
+    &__container {
+      max-width: 240px; // Adjust max-width for containers
+      margin-bottom: 30px; // Adjust margin bottom for containers
+      max-height: 400px; // Adjust max-height for containers
+      height: 100%; // Adjust height for containers
+    }
+    &__text {
+      font-size: 18px; // Adjust font size for text
+      margin-bottom: 45px; // Adjust margin bottom for text
+    }
+    &__price {
+      font-size: 22px; // Adjust font size for price
+    }
+    &__add {
+      img {
+        width: 30px; // Adjust width for additional elements
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<div class="popup">
+    <div class="popup__block">
+        <!-- Close button for the popup -->
+        <button id="close-popup" class="popup__close">
+            <img src="images/icon_close.svg" alt="X">
+        </button>
+        <!-- Popup header -->
+        <h2>Зворотній зв'язок</h2>
+        <!-- Feedback form within the popup -->
+        <form class="popup__form">
+            <!-- Name input field -->
+            <label class="popup__label" for="name">Ваше ім'я*</label>
+            <input class="popup__input" id="name" required>
+            <!-- Phone input field -->
+            <label class="popup__label" for="phone">Телефон*</label>
+            <input class="popup__input" id="phone" required type="tel">
+            <!-- Email input field -->
+            <label class="popup__label" for="email">Email*</label>
+            <input class="popup__input" type="email" id="email" required>
+            <!-- Message input field -->
+            <label class="popup__label" for="message">Повідомлення</label>
+            <input type="text" id="message" class="popup__message">
+        </form>
+        <!-- Submit button for the form -->
+        <button type="submit" id="send-button" class="popup__submit">Відправити</button>
+    </div>
+</div>

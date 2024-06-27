@@ -1,106 +1,100 @@
 .menu {
-  background-color: $dark-grey;
-  padding: 15px;
+  background-color: $dark-grey; // Background color for menu
+  padding: 15px; // Padding inside menu
+
+  // Burger menu styles
   &__burger {
-    display: none;
-    cursor: pointer;
+    display: none; // Hide burger menu by default
+    cursor: pointer; // Set cursor to pointer
   }
 
+  // Menu list styles
   &__list {
-    display: flex;
-    padding: 26px 35px;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; // Flex layout for menu list
+    padding: 26px 35px; // Padding inside menu list
+    align-items: center; // Center align items vertically
+    justify-content: space-between; // Space items evenly along the main axis
 
+    // Anchor (link) styles inside menu list
     a {
-      text-decoration: none;
-      font-size: 21px;
-      color: $white;
-    }
+      text-decoration: none; // Remove underline from links
+      font-size: 21px; // Font size for links
+      color: $white; // Text color for links
 
-    li:nth-child(3) {
-      a {
-        text-decoration: $white underline 1.5px;
+      &:hover {
+        text-decoration: $white underline 1.5px; // Underline effect on hover with white color
       }
     }
 
+    // Styling for list items inside menu list
     li {
-      display: contents;
+      display: contents; // Display list items as contents
     }
 
+    // Styling for separator between list items
     li + li::before {
-      content: '|';
-      color: $white;
-      font-weight: bolder;
-      font-size: 22px;
+      content: '|'; // Separator content
+      color: $white; // Color for separator
+      font-weight: bolder; // Bold font weight for separator
+      font-size: 22px; // Font size for separator
     }
   }
 
-
-
+  // Responsive styles for tablet
   @include breakpoint(tablet) {
     &__burger {
-      display: block;
+      display: block; // Display burger menu on tablet and larger screens
 
       &-line {
-        transition: transform 0.75s ease, opacity 0.75 ease;
-        display: block;
-        width: 32px;
-        height: 2px;
-        background-color: $white;
-        margin-top: 8px;
+        transition: transform 0.75s ease, opacity 0.75 ease; // Transition effect for burger menu lines
+        display: block; // Display burger menu lines
+        width: 32px; // Width of burger menu lines
+        height: 2px; // Height of burger menu lines
+        background-color: $white; // Color for burger menu lines
+        margin-top: 8px; // Top margin for burger menu lines
       }
     }
+
     &__list {
-      display: none;
+      display: none; // Hide menu list on tablet by default
       li + li::before {
-        content: '';
+        content: ''; // Empty content for separator on tablet and larger screens
       }
+
       &.show {
-        display: flex;
-        flex-direction: column;
-        margin-top: -15px;
+        display: flex; // Display menu list as flex container when 'show' class is applied
+        flex-direction: column; // Stack items vertically in column layout
+        margin-top: -15px; // Negative top margin to align menu list with burger menu
+
+        // Adjusted styles for links inside the menu list when 'show' class is applied
         a {
-            margin: 10px 0;
-            font-size: 32px;
-            font-weight: bolder;
-        }
-
-        + .menu__burger {
-          .menu__burger-line1 {
-            transform: translate(-10px) rotate(45deg) translate(15px);
-          }
-
-          .menu__burger-line2 {
-            opacity: 0;
-          }
-
-          .menu__burger-line3 {
-            transform: translate(-10px) rotate(-45deg) translate(15px);
-          }
+          margin: 10px 0; // Margin for links
+          font-size: 32px; // Font size for links
+          font-weight: bolder; // Bold font weight for links
         }
       }
-      }
+    }
   }
 
+  // Responsive styles for phablet (larger than phones, smaller than tablets)
   @include breakpoint(phablet) {
     &__list {
       &.show {
         a {
-          font-size: 28px;
+          font-size: 28px; // Adjust font size for links when 'show' class is applied on phablet
         }
       }
     }
   }
 
+  // Responsive styles for large phones
   @include breakpoint(largePhone) {
     &__list {
       &.show {
         a {
-          font-size: 25px;
+          font-size: 25px; // Adjust font size for links when 'show' class is applied on large phones
         }
       }
     }
   }
-
-  }
+}
