@@ -1,130 +1,146 @@
 .popup {
-  display: none;
-  transition: opacity 1s ease, visibility 1s ease;
-  opacity: 0;
-  visibility: hidden;
+  display: none; // Hide popup by default
+  transition: opacity 1s ease, visibility 1s ease; // Smooth transition for opacity and visibility
+  opacity: 0; // Set initial opacity to 0
+  visibility: hidden; // Hide element visibility
+
   &.show {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(51, 51, 51, 0.7);
-    z-index: 1001;
-    margin: auto;
-    display: block;
-    opacity: 1;
-    visibility: visible;
+    // Show popup when 'show' class is added
+    position: fixed; // Fixed positioning to overlay entire screen
+    width: 100%; // Full width of the viewport
+    height: 100%; // Full height of the viewport
+    left: 0; // Align left edge to viewport
+    top: 0; // Align top edge to viewport
+    background: rgba(51, 51, 51, 0.7); // Semi-transparent dark background
+    z-index: 1001; // Higher z-index to overlay other content
+    margin: auto; // Center horizontally and vertically
+    display: block; // Display popup block
+    opacity: 1; // Full opacity to show popup
+    visibility: visible; // Make popup visible
   }
 
   &__block {
-    position: absolute;
-    padding: 35px 65px 25px;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    width: 470px;
-    height: 580px;
-    background-color: $white;
+    // Popup block styles
+    position: absolute; // Absolute positioning inside the popup container
+    padding: 35px 65px 25px; // Padding inside the popup block
+    top: 20%; // 20% from the top of the viewport
+    left: 50%; // Center horizontally
+    transform: translate(-50%, -20%); // Center vertically
+    width: 470px; // Width of the popup block
+    height: 580px; // Height of the popup block
+    background-color: $white; // Background color of the popup block
 
     h2 {
-      text-transform: uppercase;
-      color: $light-black;
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 0;
+      text-transform: uppercase; // Uppercase text for heading
+      color: $light-black; // Text color for heading
+      text-align: center; // Center align heading
+      margin-top: 0; // Remove top margin
+      margin-bottom: 0; // Remove bottom margin
     }
   }
 
   &__close {
-    position: absolute;
-    right: -30px;
-    top: -30px;
-    border: none;
-    outline: none;
-    background-color: $dark-grey;
-    width: 30px;
-    height: 30px;
+    // Close button styles
+    position: absolute; // Absolute positioning inside the popup
+    right: -30px; // Position 30px to the right of the popup block
+    top: -30px; // Position 30px above the popup block
+    border: none; // No border for the button
+    outline: none; // No outline on focus
+    background-color: $dark-grey; // Background color of the close button
+    width: 30px; // Width of the close button
+    height: 30px; // Height of the close button
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
+    // Form container styles inside the popup
+    display: flex; // Flex layout for form elements
+    flex-direction: column; // Stack form elements vertically
   }
+
   &__label {
-    text-align: center;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    color: $light-black;
+    // Label styles inside the form
+    text-align: center; // Center align text
+    margin-bottom: 5px; // Bottom margin for labels
+    margin-top: 20px; // Top margin for labels
+    color: $light-black; // Text color for labels
   }
+
   &__input {
-    padding: 10px;
+    // Input field styles inside the form
+    padding: 10px; // Padding inside input fields
+
     &.highlight-error {
-      border: 1.5px solid $red;
-      background: radial-gradient(ellipse at center, $white 65%, $red 120%);
-      color: $red;
+      // Highlight style for error input fields
+      border: 1.5px solid $red; // Red border for error input fields
+      background: radial-gradient(ellipse at center, $white 65%, $red 120%); // Radial gradient background for error input fields
+      color: $red; // Text color for error input fields
     }
   }
 
   &__message {
-    height: 135px;
-  }
-  &__submit {
-    border: none;
-    background-color: $dark-grey;
-    text-transform: uppercase;
-    color: $white;
-    font-size: 20px;
-    padding: 10px;display: block;
-    margin: 10px auto 0;
+    // Message textarea styles inside the form
+    height: 135px; // Height of the textarea
   }
 
+  &__submit {
+    // Submit button styles inside the form
+    border: none; // No border for the button
+    background-color: $dark-grey; // Background color of the button
+    text-transform: uppercase; // Uppercase text for button
+    color: $white; // Text color for button
+    font-size: 20px; // Font size for button
+    padding: 10px; // Padding inside the button
+    display: block; // Display block for button
+    margin: 10px auto 0; // Margin for button
+  }
+
+  // Responsive styles for phablet (larger than phones, smaller than tablets)
   @include breakpoint(phablet) {
     &__block {
-      top: 20%;
-      width: 400px;
-      height: 540px;
+      top: 20%; // Adjusted top position for phablet
+      width: 400px; // Adjusted width for phablet
+      height: 540px; // Adjusted height for phablet
 
       h2 {
-        font-size: 22px;
+        font-size: 22px; // Adjusted font size for heading on phablet
       }
     }
     &__message {
-      height: 115px;
+      height: 115px; // Adjusted height for message textarea on phablet
     }
     &__label {
-      margin-top: 15px;
+      margin-top: 15px; // Adjusted top margin for labels on phablet
     }
     &__submit {
-      font-size: 18px;
+      font-size: 18px; // Adjusted font size for submit button on phablet
     }
   }
 
+  // Responsive styles for large phones
   @include breakpoint(largePhone) {
-
     &__block {
-      top: 12%;
-      width: 254px;
-      height: 490px;
-      padding: 35px 22px 25px;
+      top: 12%; // Adjusted top position for large phones
+      width: 254px; // Adjusted width for large phones
+      height: 490px; // Adjusted height for large phones
+      padding: 35px 22px 25px; // Adjusted padding for large phones
 
       h2 {
-        font-size: 18px;
+        font-size: 18px; // Adjusted font size for heading on large phones
       }
     }
     &__message {
-      height: 115px;
+      height: 115px; // Adjusted height for message textarea on large phones
     }
     &__label {
-      margin-top: 15px;
-      font-size: 14px;
+      margin-top: 15px; // Adjusted top margin for labels on large phones
+      font-size: 14px; // Adjusted font size for labels on large phones
     }
     &__input {
-      font-size: 14px;
-      padding: 5px 10px;
+      font-size: 14px; // Adjusted font size for input fields on large phones
+      padding: 5px 10px; // Adjusted padding for input fields on large phones
     }
     &__submit {
-      font-size: 18px;
+      font-size: 18px; // Adjusted font size for submit button on large phones
     }
   }
 }

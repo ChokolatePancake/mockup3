@@ -10,7 +10,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; // Min height = screen height, need for pushing footer down
 }
 
 // This will push the footer to the bottom
@@ -19,11 +19,12 @@ main {
 }
 
 .container {
-  max-width: 980px;
+  max-width: 980px; // Starting container width
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
 
+  // breakpoints for container
   @include breakpoint(laptop) {
     max-width: 750px;
   }

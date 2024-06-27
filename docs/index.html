@@ -6,31 +6,45 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mockup3</title>
+    <!-- Link to main CSS file -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
+<!-- Include header HTML file -->
 <header class="header">
-   <div class="container">
-           <div class="header__logo">
-               <img class="header__logo-image" src="images/logo.png" alt="company logo" width="100px" height="100px">
-               <div class="header__logo-text">
-                   <h1>Назва компанії</h1>
-                   <p>найкрутіша компанія</p>
-               </div></div>
-           <div class="header__feedback">
-               <a href="tel:+7(499)777-77-77">+7(499)777-77-77</a>
-               <a href="tel:+7(499)777-77-77">+7(499)777-77-77</a>
-               <button id="show-popup">Зворотній зв'язок</button>
-       </div></div>
+    <div class="container">
+        <!-- Logo section with image and text -->
+        <div class="header__logo">
+            <img class="header__logo-image" src="images/logo.png" alt="company logo" width="100px" height="100px">
+            <!-- Text section -->
+            <div class="header__logo-text">
+                <h1>Назва компанії</h1>
+                <p>найкрутіша компанія</p>
+            </div>
+        </div>
+        <!-- Feedback section with phone numbers and a feedback button -->
+        <div class="header__feedback">
+            <!-- Phone numbers as links -->
+            <a href="tel:+7(499)777-77-77">+7(499)777-77-77</a>
+            <a href="tel:+7(499)777-77-77">+7(499)777-77-77</a>
+            <!-- Button for feedback popup -->
+            <button id="show-popup">Зворотній зв'язок</button>
+        </div>
+    </div>
 </header>
+
+<!-- Include menu HTML file -->
 <div class="menu">
     <div class="container">
+        <!-- Burger menu icon for mobile navigation -->
         <div class="menu__burger">
             <span class="menu__burger-line menu__burger-line1"></span>
             <span class="menu__burger-line menu__burger-line2"></span>
             <span class="menu__burger-line menu__burger-line3"></span>
         </div>
+        <!-- Section with navigation links(same as in footer) -->
         <ol class="menu__list">
             <li><a href="/">Головна</a></li>
             <li><a href="/">Каталог</a></li>
@@ -42,19 +56,32 @@
     </div>
 </div>
 <main>
-<div class="slider">
+    <!-- Include slider HTML file -->
+    <div class="slider">
+    <!-- Previous arrow for sliding to the previous slide -->
     <div class="slider__arrows prev"><</div>
+    <!-- Container for the slides -->
     <div class="slider__content">
-        <div class="slider__slide slider__slide-1"><img src="images/slide1.jpg" alt="slide 1"></div>
-        <div class="slider__slide slider__slide-2"><img src="images/slide2.jpg" alt="slide 2"></div>
+        <!-- Slides -->
+        <div class="slider__slide slider__slide-1">
+            <img src="images/slide1.jpg" alt="slide 1">
+        </div>
+        <div class="slider__slide slider__slide-2">
+            <img src="images/slide2.jpg" alt="slide 2">
+        </div>
     </div>
+    <!-- Next arrow for sliding to the next slide -->
     <div class="slider__arrows next">></div>
 </div>
-<div class="content">
+
+    <!-- Include content HTML file -->
+    <div class="content">
     <div class="container">
+        <!-- Breadcrumb navigation for the user to see the current page path -->
         <div class="content__breadcrumbs">
-            <p><a href="">Головна</a>/ <a href="">Каталог</a>/ <a href="">Побутова техніка</a> </p>
+            <p><a href="">Головна</a>/ <a href="">Каталог</a>/ <a href="">Побутова техніка</a></p>
         </div>
+        <!-- Burger menu icon for mobile navigation -->
         <div class="content__burger">
             <span class="content__burger-line content__burger-line1"></span>
             <span class="content__burger-line content__burger-line2"></span>
@@ -62,8 +89,11 @@
         </div>
         <div class="content__blocks">
             <div class="content__left-block">
+                <!-- Sidebar with categories and subcategories -->
                 <div class="content__categories">
+                    <!-- Category: Cars -->
                     <a href="" class="content__category">Автомобілі</a>
+                    <!--Subcategories-->
                     <ol class="content__list-1 content__lists">
                         <li><a href="">Легкові автомобілі</a></li>
                         <li><a href="">Вантажівки</a></li>
@@ -71,20 +101,26 @@
                         <li><a href="">Причепи</a></li>
                         <li><a href="">Запчастини та аксесуари</a></li>
                     </ol>
+                    <!-- Category: Home Appliances -->
                     <a href="" class="content__category">Побутова техніка</a>
+                    <!--Subcategories-->
                     <ol class="content__list-2 content__lists">
                         <li><a href="">Мікрохвильовки</a></li>
                         <li><a href="">Холодильники</a></li>
                         <li><a href="">Посудомийки</a></li>
                         <li><a href="">Чайники</a></li>
                     </ol>
+                    <!-- Category: Phones -->
                     <a href="" class="content__category">Телефони</a>
+                    <!--Subcategories-->
                     <ol class="content__list-3 content__lists">
                         <li><a href="">Смартфони</a></li>
                         <li><a href="">Планшети</a></li>
                         <li><a href="">Аксесуари (навушники, чохли, зарядні пристрої)</a></li>
                     </ol>
+                    <!-- Category: Computers -->
                     <a href="" class="content__category">Комп'ютери</a>
+                    <!--Subcategories-->
                     <ol class="content__list-4 content__lists">
                         <li><a href="">Ноутбуки</a></li>
                         <li><a href="">Настільні ПК</a></li>
@@ -92,7 +128,9 @@
                         <li><a href="">Принтери/Сканери</a></li>
                         <li><a href="">Комплектуючі</a></li>
                     </ol>
+                    <!-- Category: Clothing -->
                     <a href="" class="content__category">Одяг</a>
+                    <!--Subcategories-->
                     <ol class="content__list-5 content__lists">
                         <li><a href="">Чоловічий одяг</a></li>
                         <li><a href="">Жіночий одяг</a></li>
@@ -100,7 +138,9 @@
                         <li><a href="">Взуття</a></li>
                         <li><a href="">Аксесуари</a></li>
                     </ol>
+                    <!-- Category: Real Estate -->
                     <a href="" class="content__category">Нерухомість</a>
+                    <!--Subcategories-->
                     <ol class="content__list-6 content__lists">
                         <li><a href="">Квартири</a></li>
                         <li><a href="">Будинки</a></li>
@@ -110,22 +150,27 @@
                     </ol>
                 </div>
 
+                <!-- Link to price list with an image -->
                 <div class="content__price-list">
                     <a href=""><img class="content__price-list-image" src="images/logo_price-list.jpg" alt="price-list"></a>
                     <a href="" class="content__price-list-text">Прайс-лист</a>
                 </div>
             </div>
 
+            <!--Block with products-->
             <div class="content__right-block">
                 <div class="content__containers">
+                    <!-- Product container with image, description, price, and add-to-cart button -->
                     <div class="content__container">
                         <div class="content__image"><a href=""><img src="images/nophoto.jpg" alt="no photo"></a></div>
                         <div class="content__text"><a href="">Найкрутіший чайник 3000, який точно варто купити!</a></div>
                         <div class="content__bottom">
                             <div class="content__price">1900$</div>
+                            <!--Icon to add to basket-->
                             <div class="content__add"><a href=""><img src="images/icon_buy.svg" alt="add"></a></div>
                         </div>
                     </div>
+                    <!-- Repeat the product container for more products -->
                     <div class="content__container">
                         <div class="content__image"><a href=""><img src="images/nophoto.jpg" alt="no photo"></a></div>
                         <div class="content__text"><a href="">Найкрутіший чайник 3000, який точно варто купити!</a></div>
@@ -160,6 +205,7 @@
                     </div>
                 </div>
 
+                <!-- Pagination for navigating through product pages -->
                 <div class="content__pagination">
                     <ol>
                         <li><a href="">1</a></li>
@@ -172,6 +218,7 @@
                     </ol>
                 </div>
                 <hr>
+                <!-- About company section -->
                 <div class="content__abouts">
                     <div class="content__about">Компанія "Піксель Плюс" існує понад 6 років, за цей час ми брали участь в розробці більш як 700 сайтів, тому можемо впевнено називати себе професіоналами. На даний момент наш колектив складається з понад 30 працівників.</div>
                     <div class="content__about">Одним з основних напрямків нашої компанії є пошукове просування сайтів. На даний час ми прасюємо з більш як 150 постійними клієнтами за понад 11000 пошуковими запитами. При цьому в роботі основний акцент ми робимо на якості робіт, а також застосовуємо власні розробки в області SEO просування.</div>
@@ -180,13 +227,17 @@
         </div>
     </div>
 </div>
+
 </main>
+<!-- Include footer HTML file -->
 <footer class="footer">
     <div class="container">
+        <!-- Left section of the footer with copyright info and contact email -->
         <div class="footer__left-text">
             <p>© 2012-2013 ЗАО "Компанія"</p>
             <a href="mailto: info@name.ua">info@name.ua</a>
         </div>
+        <!-- Middle section of the footer with navigation links(same as in menu) -->
         <div class="footer__menu">
             <ol>
                 <li><a href="/">Головна</a></li>
@@ -196,36 +247,59 @@
                 <li><a href="/">Контакти</a></li>
             </ol>
         </div>
+        <!-- Right section of the footer with dev company logo and website development credit -->
         <div class="footer__right-text">
             <div class="footer__logo"><img src="images/logo_companydev.svg" alt="companydev logo"></div>
-            <p><a href="">Розробка сайту</a> - компанія"Піксель Плюс"</p>
+            <p><a href="">Розробка сайту</a> - компанія "Піксель Плюс"</p>
         </div>
     </div>
 </footer>
+
+<!-- Include popup HTML file -->
 <div class="popup">
     <div class="popup__block">
-        <button id="close-popup" class="popup__close"><img src="images/icon_close.svg" alt="X"></button>
+        <!-- Close button for the popup -->
+        <button id="close-popup" class="popup__close">
+            <img src="images/icon_close.svg" alt="X">
+        </button>
+        <!-- Popup header -->
         <h2>Зворотній зв'язок</h2>
+        <!-- Feedback form within the popup -->
         <form class="popup__form">
-        <label class="popup__label" for="name">Ваше ім'я*</label>
-        <input class="popup__input" id="name" class="popup__input" required>
-        <label class="popup__label" for="phone">Телефон*</label>
-        <input class="popup__input" id="phone" class="popup__input" required type="tel">
-        <label class="popup__label" for="email">Email*</label>
-        <input class="popup__input" type="email"id="email" required>
-        <label class="popup__label" for="message">Повідомлення</label>
-        <input type="text" id="message" class="popup__message">
+            <!-- Name input field -->
+            <label class="popup__label" for="name">Ваше ім'я*</label>
+            <input class="popup__input" id="name" required>
+            <!-- Phone input field -->
+            <label class="popup__label" for="phone">Телефон*</label>
+            <input class="popup__input" id="phone" required type="tel">
+            <!-- Email input field -->
+            <label class="popup__label" for="email">Email*</label>
+            <input class="popup__input" type="email" id="email" required>
+            <!-- Message input field -->
+            <label class="popup__label" for="message">Повідомлення</label>
+            <input type="text" id="message" class="popup__message">
         </form>
+        <!-- Submit button for the form -->
         <button type="submit" id="send-button" class="popup__submit">Відправити</button>
     </div>
 </div>
+
+
+<!-- JavaScript for burger menu functionality -->
 <script src="/js/burger.js"></script>
+<!-- jQuery library -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- jQuery migrate plugin -->
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Slick Carousel JavaScript from CDN -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Custom JavaScript for slider functionality -->
 <script src="js/slider.js"></script>
+<!-- Custom JavaScript for categories functionality -->
 <script src="js/categories.js"></script>
+<!-- Custom JavaScript for categories burger menu -->
 <script src="js/categories-burger.js"></script>
+<!-- Custom JavaScript for popup functionality -->
 <script src="js/popup.js"></script>
 </body>
 </html>

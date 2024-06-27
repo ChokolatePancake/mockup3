@@ -1,100 +1,113 @@
+// Define variables for colors (assuming these are defined elsewhere)
+$dark-grey: #777777;
+$white: #ffffff;
+
+// Styles for footer section
 .footer {
   background-color: $dark-grey;
-  height: 230px;
-  padding: 50px 0;
-  >.container {
+  height: 230px; // Set initial height of footer
+  padding: 50px 0; // Padding inside footer
+
+  > .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; // Space between items inside container
   }
 
+  // Styles for links inside footer
   a {
     color: $white;
     font-size: 16px;
   }
 
+  // Left text section styles
   &__left-text {
     p {
       font-size: 16px;
       color: $white;
-      margin: 0 0 10px;
+      margin: 0 0 10px; // Margin bottom for paragraphs
     }
     a {
-      text-decoration: none;
+      text-decoration: none; // Remove underline from links
     }
   }
 
+  // Menu section styles
   &__menu {
-    max-width: 125px;
+    max-width: 125px; // Max width for menu section
     li {
       &:not(:last-child) {
-        margin-bottom: 9px;
+        margin-bottom: 9px; // Margin bottom for menu items
       }
     }
   }
 
+  // Logo section styles
   &__logo {
-    margin-right: 8px;
+    margin-right: 8px; // Margin right for logo
   }
 
+  // Right text section styles
   &__right-text {
     display: flex;
     p {
-      max-width: 170px;
-      margin: 0;
+      max-width: 170px; // Max width for paragraphs
+      margin: 0; // Reset margin
       font-size: 16px;
       color: $white;
     }
   }
 
+  // Responsive styles for tablets
   @include breakpoint(tablet) {
     &__left-text {
-      max-width: 130px;
+      max-width: 130px; // Adjust max width for left text section
     }
 
     &__right-text {
-      max-width: 170px;
+      max-width: 170px; // Adjust max width for right text section
     }
   }
 
+  // Responsive styles for phablet (larger than phones, smaller than tablets)
   @include breakpoint(phablet) {
     p {
-      font-size: 14px;
+      font-size: 14px; // Adjust font size for paragraphs
     }
     a {
-      font-size: 14px;
+      font-size: 14px; // Adjust font size for links
     }
     &__logo {
       img {
-        max-width: 30px;
+        max-width: 30px; // Adjust max width for logo image
       }
     }
   }
 
+  // Responsive styles for large phones
   @include breakpoint(largePhone) {
-    height: 400px;
-    >.container {
-      flex-direction: column-reverse;
+    height: 400px; // Adjust height for footer
+    > .container {
+      flex-direction: column-reverse; // Reverse column direction for items inside container
     }
 
     &__right-text {
-
-      max-width: 200px;
-      margin-bottom: 30px;
+      max-width: 200px; // Adjust max width for right text section
+      margin-bottom: 30px; // Margin bottom for right text section
     }
 
     &__menu {
-      margin: 0 auto 40px;
-      max-width: 160px;
+      margin: 0 auto 40px; // Center align menu section
+      max-width: 160px; // Adjust max width for menu section
       li {
-        text-align: center;
+        text-align: center; // Center align menu items
         a {
-          font-size: 20px;
+          font-size: 20px; // Adjust font size for links inside menu
         }
       }
     }
 
     &__left-text {
-      max-width: 200px;
+      max-width: 200px; // Adjust max width for left text section
     }
   }
 }

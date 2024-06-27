@@ -1,113 +1,121 @@
 .header {
-  background-color: $light-grey;
-  color: $dark-grey;
-  max-height: 230px;
-  padding: 65px 0;
-  >.container {
-    display: flex;
+  background-color: $light-grey; // Background color for header
+  color: $dark-grey; // Text color for header
+  max-height: 230px; // Maximum height of header
+  padding: 65px 0; // Padding inside header
+
+  > .container {
+    display: flex; // Flex layout for items inside container
   }
 
+  // Feedback section styles
   &__feedback {
-    display: grid;
-    justify-items: right;
-    margin-left: auto;
-    margin-top: -20px;
-    margin-right: 0;
+    display: grid; // Grid layout for feedback section
+    justify-items: right; // Align items to the right
+    margin-left: auto; // Auto margin left
+    margin-top: -20px; // Negative top margin
+    margin-right: 0; // No margin right
+
     a {
-      margin-top: 0;
-      color:$dark-grey;
-      text-decoration: none;
-      margin-bottom: 10px;
-      font-size: 30px;
-      font-weight: lighter;
+      margin-top: 0; // Reset margin top for links
+      color: $dark-grey; // Text color for links
+      text-decoration: none; // Remove underline from links
+      margin-bottom: 10px; // Margin bottom for links
+      font-size: 30px; // Font size for links
+      font-weight: lighter; // Lighter font weight
     }
+
     button {
-      border: none;
-      outline: none;
-      background-color: transparent;
-      color:$dark-grey;
-      font-size: 23px;
-      font-weight: bold;
-      text-decoration: $dark-grey underline dashed 1.5px;
+      border: none; // No border for button
+      outline: none; // No outline for button
+      background-color: transparent; // Transparent background for button
+      color: $dark-grey; // Text color for button
+      font-size: 23px; // Font size for button
+      font-weight: bold; // Bold font weight
+      text-decoration: $dark-grey underline dashed 1.5px; // Custom text decoration
+
       &:hover {
-        color: $light-black;
-        transition: all .8s ease-in-out;
+        color: $light-black; // Text color on hover
+        transition: all .8s ease-in-out; // Transition effect on hover
       }
     }
   }
 
+  // Logo section styles
   &__logo {
-    display: flex;
+    display: flex; // Flex layout for logo section
   }
 
+  // Logo image styles
   &__logo-image {
-    margin-right: 14px;
+    margin-right: 14px; // Margin right for logo image
+
+    @include breakpoint(phablet) {
+      max-width: 90px; // Adjust max width for logo image on phablet
+      max-height: 90px; // Adjust max height for logo image on phablet
+    }
   }
 
+  // Logo text styles
   &__logo-text {
-    max-width: 160px;
+    max-width: 160px; // Maximum width for logo text
+
     h1 {
-      font-size: 24px;
-      margin-top: 8px;
-      margin-bottom: 14px;
+      font-size: 24px; // Font size for heading
+      margin-top: 8px; // Margin top for heading
+      margin-bottom: 14px; // Margin bottom for heading
     }
+
     p {
-      margin: 0;
-      font-size: 14px;
+      margin: 0; // Reset margin for paragraphs
+      font-size: 14px; // Font size for paragraphs
+    }
+
+    @include breakpoint(phablet) {
+      h1 {
+        font-size: 22px; // Adjust font size for heading on phablet
+      }
     }
   }
 
+  // Responsive styles for tablet
   @include breakpoint(tablet) {
     &__feedback {
       a {
-        font-size: 26px;
+        font-size: 26px; // Adjust font size for links on tablet
       }
       button {
-        font-size: 20px;
+        font-size: 20px; // Adjust font size for button on tablet
       }
     }
   }
 
+  // Responsive styles for phablet (larger than phones, smaller than tablets)
   @include breakpoint(phablet) {
-    &__logo-image {
-      max-width: 90px;
-      max-height: 90px;
-    }
-    &__logo-text {
-      h1{
-        font-size: 22px;
+    & {
+      padding: 45px 0; // Adjust padding for header on phablet
+      max-height: 300px; // Adjust max height for header on phablet
+      > .container {
+        flex-direction: column; // Change flex direction to column for items inside container
       }
     }
+
     &__feedback {
-      margin-top: 5px;
-      grid-template-rows: 30px;
+      margin-top: 15px; // Adjust margin top for feedback section on phablet
+      justify-items: left; // Align items to the left
+      margin-left: 0; // No left margin
+      margin-right: auto; // Auto right margin
+      grid-template-rows: 30px; // Adjust grid template rows for feedback section
 
       a {
-        font-size: 20px;
-        margin-bottom: 5px;
+        font-size: 20px; // Adjust font size for links on phablet
+        margin-bottom: 5px; // Adjust margin bottom for links on phablet
       }
-      button {
-        font-size: 18px;
-        text-decoration:  $dark-grey underline dashed 1px;
-      }
-    }
-  }
 
-  @include breakpoint(largePhone) {
-    & {
-      padding: 45px 0;
-      max-height: 300px;
-      >.container {
-        flex-direction: column;
+      button {
+        font-size: 18px; // Adjust font size for button on phablet
+        text-decoration: $dark-grey underline dashed 1px; // Adjust text decoration for button on phablet
       }
-    }
-    &__feedback{
-      margin-top: 15px;
-      justify-items: left;
-      margin-left: 0;
-      margin-right: auto;
     }
   }
 }
-
-
